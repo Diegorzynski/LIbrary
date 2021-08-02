@@ -1,0 +1,13 @@
+1 - When click on Add Book(input 31 html) will launch the eventListener 'submit' (line 100 js)
+
+2 - Will prevent default, because theres not database to submit and will gets input from the id #title, #author, #isbn (lines105,106,107 js), and assign them to the variables title, author, isbn.
+
+3 - after validation will assign to a const 'book' using the constructor 'new Book'(line 2 js)
+
+4 - (line 117) will use the method addBookToList (line 19 ) to add it to the UI(class in line 10)
+
+5 - (line 120) Use method addBook(line 74 ) to add to the class Store( line 61)
+
+6 - (line 123) will use method showAlert (line 41) to tell book as added
+
+7 - (line 126) will use a method clearFields(line 53) to clear the fields from the UI
