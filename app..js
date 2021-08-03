@@ -38,7 +38,7 @@ class UI { // will have the methods static so no need to instatiate.
 
      }
 
-     static showAlert(message, className){ // create a div from scratch and insert into the UI
+     static showAlert(message, className){ 
       const div = document.createElement('div'); 
       div.className = `alert alert-${className}`;
       div.appendChild(document.createTextNode(message));

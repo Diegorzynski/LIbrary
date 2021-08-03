@@ -10,4 +10,45 @@
 
 6 - (line 123) will use method showAlert (line 41) to tell book as added
 
-7 - (line 126) will use a method clearFields(line 53) to clear the fields from the UI
+7 - (line 126) will use a method clearFields(line 53) to clear the fields from the UI.
+
+
+class Book = has 1 constructor
+
+class UI =  has a method displayBooks
+                          static showAlert
+                          static addBookToList
+                          static deleteBooks
+                          static clearFields
+
+class Store = has a static method getBooks
+                                                  addBook
+                                                  removeBook
+
+
+Page starts at line 98 addEventListener DOMContentLoaded
+1 - Executes UI.displayBooks to get books from local store if any.
+2 - displayBooks loops through the books and add into the UI UI.addBookToList
+     will assign to List the books from the id#book-list
+3 - Creates a DOM element 'tr' assigned to the const row, then List.appendChild(row) to append the elements assigned to list to the newly created row. 
+
+
+From line 100 to 128 its all under the addEventListener submit: 
+1 - prevent default
+2- validation ( show alert if fields not completed)
+3 - 144 create new Book using constructor
+4 - add book to UI
+5 - add book to local store
+6 - show alert( book added)
+7 - clear UI fields.
+
+
+How to show an alert
+
+1 - Create a method showAlert takes two parameters (message, className) 
+2 - create a variable const div and use document.createElement(div) to create a new div.
+3 - add a className to div div.className and assign the type of message `alert ${danger}`
+4 - Append a child to the div using div.appendChild(document.createTextNode(message)
+5 - Create a const container and assign the class from the container using document.querySelector('.container')
+6 - Create a const form and assign the id from the form ex document.querySelector('#book-form')
+7 - Insert the new div inside the container in the right place ex: container.insertBefore(div,form).
